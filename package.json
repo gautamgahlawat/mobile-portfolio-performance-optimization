@@ -1,0 +1,26 @@
+{
+  "name": "website-optimization",
+  "version": "1.0.0",
+  "description": "Project 4 of frontend  nanodegree",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gautamgahlawat/mobile-portfolio-performance-optimization.git"
+  },
+  "keywords": [
+    "optimize",
+    "performance"
+  ],
+  "author": "Gautam Gahlawat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gautamgahlawat/mobile-portfolio-performance-optimization/issues"
+  },
+  "homepage": "https://github.com/gautamgahlawat/mobile-portfolio-performance-optimization#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  }
+}
