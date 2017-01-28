@@ -114,5 +114,5 @@ module.exports = function(grunt) {
     // grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Register the tasks as default actions for the 'grunt' command
-  grunt.registerTask('default',['clean', 'cssmin', 'htmlmin', 'imagemin', 'inlinecss', 'uglify']);
+  grunt.registerTask('default',['clean', 'cssmin', 'htmlmin', 'inlinecss', 'uglify']);
 };
