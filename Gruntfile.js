@@ -94,16 +94,12 @@ module.exports = function(grunt) {
           'dist/index.html': 'src/index.html'
         }
       }
-    },
-
-    // Run a clean up function so images don't get recursively optimized
-    clean: {
-      build: {
-        src: 'dist/img/'
-      }
     }
 
   });
+
+
+  // NO needed as using "load-grunt-tasks"
 
   // Tell grunt to use the plugins
     // grunt.loadNpmTasks('grunt-contrib-clean');
@@ -114,5 +110,5 @@ module.exports = function(grunt) {
     // grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Register the tasks as default actions for the 'grunt' command
-  grunt.registerTask('default',['clean', 'cssmin', 'htmlmin', 'inlinecss', 'uglify']);
+  grunt.registerTask('default',['cssmin', 'htmlmin', 'inlinecss', 'uglify']);
 };
