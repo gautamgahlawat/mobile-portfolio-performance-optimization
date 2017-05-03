@@ -24,24 +24,24 @@ module.exports = function(grunt) {
     },
 
     // Optimize the images in the img/ folder
-    // imagemin: {
-    //   dist: {
-    //     options: {
-    //       optimizationLevel: 5
-    //     },
-    //     files: [{
-    //       expand: true,                 //Enable dynamic expansion
-    //       cwd: 'src/img',               // Src matches are relative to this path
-    //       src: ['**/*.{png,jpg,gif}'],  // Actual patterns to match
-    //       dest: 'dist/img'              // Destination path prefix
-    //     }, {
-    //       expand: true,
-    //       cwd: 'src/views/images',
-    //       src: ['**/*.{png,jpg,gif}'],
-    //       dest: 'dist/views/images'
-    //     }],
-    //   }
-    // },
+    imagemin: {
+      dist: {
+        options: {
+          optimizationLevel: 5
+        },
+        files: [{
+          expand: true,                 //Enable dynamic expansion
+          cwd: 'src/img',               // Src matches are relative to this path
+          src: ['**/*.{png,jpg,gif}'],  // Actual patterns to match
+          dest: 'dist/img'              // Destination path prefix
+        }, {
+          expand: true,
+          cwd: 'src/views/images',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'dist/views/images'
+        }],
+      }
+    },
 
     // Minify the javascript file
     uglify: {
@@ -94,6 +94,15 @@ module.exports = function(grunt) {
           'dist/index.html': 'src/index.html'
         }
       }
+    },
+
+    //Sass to CSS
+    sass: {
+        dist: {
+            files: {
+              'dist/css/main.css' : 'src/sass/main.scss'
+            }
+        }
     }
 
   });
@@ -110,5 +119,5 @@ module.exports = function(grunt) {
     // grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Register the tasks as default actions for the 'grunt' command
-  grunt.registerTask('default',['cssmin', 'htmlmin', 'inlinecss', 'uglify']);
+  grunt.registerTask('default',['cssmin', 'htmlmin', 'inlinecss', 'uglify', 'imagemin', 'sass']);
 };
